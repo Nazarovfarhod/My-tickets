@@ -1,7 +1,6 @@
 import Link from "next/link";
-
 const getData = async () => {
-  const req = await fetch("http://localhost:4000/tickets", {
+  const req = await fetch("https://json-api.uz/api/project/tickets-farxod/tickets", {
     next: {
       revalidate: 0,
     },

@@ -1,17 +1,16 @@
 "use client";
 
 import { BiSolidMinusCircle } from "react-icons/bi";
-import { Navigate } from "react-router-dom";
+
 
 const handlDelete = (id) => {
-  const url = `http://localhost:4000/tickets/${id}`;
+  const url = `https://json-api.uz/api/project/tickets-farxod/tickets/${id}`;
 
   fetch(url, {
     method: "DELETE",
   })
     .then(() => {
       alert("Book deleted successfully!");
-      <Navigate to="/ticketList" replace={true} />;
       window.location.reload();
     })
     .catch((error) => {
@@ -20,7 +19,7 @@ const handlDelete = (id) => {
 };
 
 const getData = async (id) => {
-  const req = await fetch("http://localhost:4000/tickets/" + id);
+  const req = await fetch("https://json-api.uz/api/project/tickets-farxod/tickets/" + id);
   const data = await req.json();
 
   return { data };
