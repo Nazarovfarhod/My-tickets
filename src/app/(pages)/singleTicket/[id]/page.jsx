@@ -2,9 +2,8 @@
 
 import { BiSolidMinusCircle } from "react-icons/bi";
 
-
 const handlDelete = (id) => {
-  const url = `https://json-api.uz/api/project/tickets-farxod/tickets/${id}`;
+  const url = `http://localhost:4000/tickets/${id}`;
 
   fetch(url, {
     method: "DELETE",
@@ -19,7 +18,7 @@ const handlDelete = (id) => {
 };
 
 const getData = async (id) => {
-  const req = await fetch("https://json-api.uz/api/project/tickets-farxod/tickets/" + id);
+  const req = await fetch("http://localhost:4000/tickets/" + id);
   const data = await req.json();
 
   return { data };

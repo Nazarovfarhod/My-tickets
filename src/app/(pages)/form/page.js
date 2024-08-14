@@ -12,7 +12,7 @@ function Form() {
     const body = formData.get("body");
     const user_email = formData.get("user_email");
     const priority = formData.get("priority");
-    const url = "https://json-api.uz/api/project/tickets-farxod/tickets";
+    const url = "http://localhost:4000/tickets";
     fetch(url, {
       method: "POST",
       headers: {
