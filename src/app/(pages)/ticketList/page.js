@@ -1,10 +1,13 @@
 import Link from "next/link";
 const getData = async () => {
-  const req = await fetch("https://json-api.uz/api/project/tickets-farxod/tickets", {
-    next: {
-      revalidate: 0,
-    },
-  });
+  const req = await fetch(
+    "https://json-api.uz/api/project/tickets-farxod/tickets",
+    {
+      next: {
+        revalidate: 0,
+      },
+    }
+  );
   const data = await req.json();
 
   return { data };
@@ -25,7 +28,7 @@ async function TicketList() {
           </Link>
         </div>
       </div>
-      {data.map((ticket) => {
+      {data.data.map((ticket) => {
         return (
           <div key={ticket.id}>
             <div className="card my-5">
