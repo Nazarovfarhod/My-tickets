@@ -18,9 +18,11 @@ const handlDelete = (id) => {
 };
 
 const getData = async (id) => {
-  const req = await fetch("https://json-api.uz/api/project/tickets-farxod/tickets/" + id);
+  const req = await fetch(
+    "https://json-api.uz/api/project/tickets-farxod/tickets/" + id
+  );
   const data = await req.json();
-
+  console.log(data);
   return { data };
 };
 
