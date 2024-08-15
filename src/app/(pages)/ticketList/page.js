@@ -25,7 +25,7 @@ async function TicketList() {
           </Link>
         </div>
       </div>
-      {data.map((ticket) => {
+      {data.data.map((ticket) => {
         return (
           <div key={ticket.id}>
             <div className="card my-5">
